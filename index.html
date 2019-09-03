@@ -2,6 +2,18 @@
 <html lang="en">
 
   <head>
+
+    <!-- Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146922366-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-146922366-1');
+    </script>
+
     
     <!-- Meta Tag -->
     <meta charset="UTF-8">
@@ -31,6 +43,15 @@
     <!-- Google Web Fonts  -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700">
     
+
+    <script>
+      function passValues(post_title,date,author,post){
+        localStorage.setItem("post_title",post_title);
+        localStorage.setItem("date",date);
+        localStorage.setItem("author",author);
+        localStorage.setItem("post",post);
+      }
+    </script>
     
     <!-- HTML5 shiv and Respond.js support IE8 or Older for HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -113,10 +134,17 @@
                             
                             <div class="col-md-12 content-page">
                               
+
                                 <!-- Blog Post Start -->
                                 <div class="col-md-12 blog-post">
                                   <div class="post-title">
-                                    <a href="single.html"><h1>Create a Blog in just Rs 60 . Kaise ? Tension kaahe lete ho hum batayenge na ..</h1></a>
+                                    <script>
+                                      var p_title = "Create a Blog in 60 Rs. Kaise ? Tension Kaahe lete ho hum batayenge na";
+                                      var date = "02 September ' 2019";
+                                      var author = "Shivam Kr Shiv";
+                                      var post = "Coming Soon !!";
+                                    </script>
+                                    <a href="single.html"><h1 onclick="passValues(p_title,date,author,post)">Create a Blog in just Rs 60 . Kaise ? Tension kaahe lete ho hum batayenge na ..</h1></a>
                                   </div>  
                                   <div class="post-info">
                                     <span>September 02, 2018 / by <a href="#" target="_blank">Shivam Kr Shiv</a></span>

@@ -3,6 +3,19 @@
 
   <head>
     
+
+    <!-- Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146922366-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-146922366-1');
+    </script>
+
+
     <!-- Meta Tag -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -125,21 +138,27 @@
                                 
                                 <!-- Post Headline Start -->
                                 <div class="post-title">
-                                    <h1>Why 95 % people aren't successful in their life ??</h1> 
-                                   </div>
+                                    <h1><span id="result1"></span></h1> 
+                               </div>
                                    <!-- Post Headline End -->
                                     
                                     
                                 <!-- Post Detail Start -->
                                 <div class="post-info">
-                                    <span>September 02, 2019 / by <a href="#" target="_blank">Shivam Kr SHiv</a></span>
-                                   </div>
+                                    <span id ="result2"></span>
+                                    <span> / by <a href="#" target="_blank"><span id="result3"></span></a></span>
+                                </div>
                                    <!-- Post Detail End -->
                                     
                                     
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at quam at orci commodo hendrerit vitae nec eros. Vestibulum neque est, imperdiet nec tortor nec, tempor semper metus. <b>Cras vel tempus velit</b>, et accumsan nisi. Duis laoreet pretium ultricies. Curabitur rhoncus auctor nunc congue sodales. Sed posuere nisi ipsum, eget dignissim nunc dapibus eget. Aenean elementum <b><a href="javascript:void(0)" data-toggle="popover" data-placement="top" data-content="You can write any text here">Click me</a></b> sollicitudin sapien ut sapien fermentum aliquet mollis. Curabitur ac quam orci sodales quam ut tempor. <b data-toggle="tooltip" data-placement="top" title="You can write any text here.">Hover me</b> suspendisse, gravida in augue in, interdum bibendum dui. Suspendisse sit amet justo sit amet diam fringilla commodo. Praesent ac magna at metus malesuada tincidunt non ac arcu. Nunc gravida eu felis vel elementum. Vestibulum sodales quam ut tempor tempor. Donec sollicitudin sapien ut sapien fermentum, non ultricies nulla gravida.</p>
-                                    
-                                                             
+                                    <p><span id= "result4" > </span> </p>
+                                       
+                                <script>
+                                  document.getElementById("result1").innerHTML=localStorage.getItem("post_title");
+                                  document.getElementById("result2").innerHTML=localStorage.getItem("date");
+                                  document.getElementById("result3").innerHTML=localStorage.getItem("author");
+                                  document.getElementById("result4").innerHTML=localStorage.getItem("post");
+                                </script>                             
                            </div>
                            <!-- Subscribe Form End -->
                            
@@ -210,6 +229,9 @@
 		SyntaxHighlighter.all();
 	</script>
 
+  <script>
+    var blog_data = [{title : 'jknx',into:'yo hj',fulldata : 'ncnjc'}] 
+  </script>
     
    </body>
  </html>
